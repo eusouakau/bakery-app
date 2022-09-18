@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bege_claro"
+    tools:context=".view.MenuActivity">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="250dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/menu_title"
+        android:textColor="@color/marrom"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coffeeList"
+        android:layout_margin="8dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
