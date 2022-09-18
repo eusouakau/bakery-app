@@ -27,33 +27,33 @@ public class OptionsActivity extends AppCompatActivity implements AdapterView.On
 
     @Override
     public void onItemClick(AdapterView<?> listView, View v, int position, long id){
-        Intent intencao;
+        Intent intent;
         switch(position) {
             case 0:
-                intencao = new Intent(this, RegisterActivity.class);
-                startActivity(intencao);
+                intent = new Intent(this, RegisterActivity.class);
+                startActivity(intent);
                 break;
             case 1:
-                intencao = new Intent(this, MenuActivity.class);
-                startActivity(intencao);
+                intent = new Intent(this, MenuActivity.class);
+                startActivity(intent);
                 break;
             case 2:
                 abrirLocalizacao(view);
                 break;
             case 3:
-                intencao = new Intent(this, InformationsActivity.class);
-                startActivity(intencao);
+                intent = new Intent(this, InformationsActivity.class);
+                startActivity(intent);
                 break;
             case 4:
-                intencao = new Intent(this, ManagerActivity.class);
-                startActivity(intencao);
+                intent = new Intent(this, ManagerActivity.class);
+                startActivity(intent);
                 break;
             case 5:
                 faleConosco(view);
                 break;
             default:
-                intencao = new Intent(this, MainActivity.class);
-                startActivity(intencao);
+                intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
         }
     }
 
