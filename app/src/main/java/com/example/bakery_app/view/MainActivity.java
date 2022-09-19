@@ -19,9 +19,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, OptionsActivity.class);
         startActivity(intent);
     }
-    //TODO colocar mapa no "como chegar até nós"
-    /*public void cadastrarCafe(View view){
-        Intent intent = new Intent(this, RegisterActivity.class);
-        startActivity(intent);
-    }*/
 }
