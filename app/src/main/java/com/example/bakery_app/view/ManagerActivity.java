@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.example.bakery_app.R;
-import com.example.bakery_app.adapter.LinhaConsultaAdapter;
 import com.example.bakery_app.adapter.LinhaGerenciamentoAdapter;
 import com.example.bakery_app.dao.AppDatabase;
 import com.example.bakery_app.dao.CoffeeDAO;
