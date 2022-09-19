@@ -18,13 +18,12 @@ import com.example.bakery_app.R;
 import com.example.bakery_app.dao.AppDatabase;
 import com.example.bakery_app.entity.Coffee;
 
-public class RegisterActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
-    //private TextView textSelecionado;
+public class RegisterActivity extends AppCompatActivity {
+
     EditText nome;
     EditText preco;
     EditText descricao;
     Spinner categoria;
-    //String valor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,15 +49,6 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
                 limparCampos();
             }
         });
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-    //    textSelecionado.setText(valor + adapterView.getSelectedItem().toString());
-    }
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
     }
 
     public void cancelarCadastro(View view){
