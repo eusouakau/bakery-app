@@ -67,8 +67,7 @@ public class OptionsActivity extends AppCompatActivity implements AdapterView.On
     }
 
     public void faleConosco(View view){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
-                "https://starbucks.com.br/sobre/atendimento"));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://starbucks.com.br/sobre/atendimento"));
         startActivity(intent);
     }
 }

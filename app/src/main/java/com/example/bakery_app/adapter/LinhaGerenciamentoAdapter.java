@@ -54,10 +54,10 @@ public class LinhaGerenciamentoAdapter extends BaseAdapter {
         return position;
     }
 
-    //Método converte os valores de um item  da lista de Tarefas para uma linha do ListView
+    //Método converte os valores de um item  da lista de Cafés para uma linha do ListView
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        //Cria um objeto para acessar o layout activity_linha.xml
+        //Cria um objeto para acessar o layout activity_row.xml
         final View viewLinhaLista = layoutInflater.inflate(R.layout.activity_manager_row,null);
 
         //vincula os campos do arquivo de layout aos objetos cadastrados
