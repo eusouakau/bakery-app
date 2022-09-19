@@ -16,7 +16,7 @@ import com.example.bakery_app.R;
 import com.example.bakery_app.dao.AppDatabase;
 import com.example.bakery_app.dao.CoffeeDAO;
 import com.example.bakery_app.entity.Coffee;
-
+//TODO para aparecer a categoria correta do cafe quando abre para a edição
 public class EditCoffeeActivity extends AppCompatActivity {
 
     EditText editTextNome ;

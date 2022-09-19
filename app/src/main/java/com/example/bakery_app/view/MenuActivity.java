@@ -12,7 +12,7 @@ import com.example.bakery_app.dao.CoffeeDAO;
 import com.example.bakery_app.entity.Coffee;
 
 import java.util.List;
-
+//TODO mostrar o preço que está aparecendo cortado na tela de forma correta no cardapioo e gerenciador
 public class MenuActivity extends AppCompatActivity {
     private ListView menuList;
 
