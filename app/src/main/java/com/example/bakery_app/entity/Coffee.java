@@ -12,6 +12,7 @@ public class Coffee implements Serializable {
     private String nome;
     private String descricao;
     private String categoria;
+    //TODO mudar preco pra double
     private String preco;
 
     public Coffee(){}
