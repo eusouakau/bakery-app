@@ -3,14 +3,11 @@ package com.example.bakery_app.view;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatEditText;
 
-import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -20,14 +17,12 @@ import com.example.bakery_app.dao.AppDatabase;
 import com.example.bakery_app.dao.CoffeeDAO;
 import com.example.bakery_app.entity.Coffee;
 
-import java.util.Calendar;
-
 public class EditCoffeeActivity extends AppCompatActivity {
 
     EditText editTextNome ;
     EditText editTextDesc;
     EditText editTextPreco;
-    EditText spinCategoria;
+    Spinner spinCategoria;
     AppCompatButton botaoEditar ;
     Coffee coffee ;
 
@@ -55,7 +50,6 @@ public class EditCoffeeActivity extends AppCompatActivity {
         editTextNome.setText(coffee.getNome());
         editTextDesc.setText(coffee.getDescricao());
         editTextPreco.setText(coffee.getPreco());
-        spinCategoria.setText(coffee.getCategoria());
     }
     private void alterarCafe() {
         if (editTextNome.getText().toString().trim().equals("")) {
@@ -72,7 +66,7 @@ public class EditCoffeeActivity extends AppCompatActivity {
             coffee.setNome(editTextNome.getText().toString().trim());
             coffee.setDescricao(editTextDesc.getText().toString().trim());
             coffee.setPreco(editTextPreco.getText().toString().trim());
-            coffee.setCategoria(spinCategoria.getText().toString().trim());
+            coffee.setCategoria(spinCategoria.getSelectedItem().toString().trim());
             CoffeeDAO coffeeDAO = AppDatabase.getInstance(getApplicationContext()).createCoffeeDAO();
             coffeeDAO.update(coffee);
             mostraMensagem();
@@ -88,7 +82,7 @@ public class EditCoffeeActivity extends AppCompatActivity {
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                // Forçando que o código retorne para a tela de consulta
+                // voltando para a tela de gerenciamento
                 Intent intent = new Intent(getApplicationContext(), ManagerActivity.class);
                 startActivity(intent);
                 finish();
@@ -100,4 +94,5 @@ public class EditCoffeeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, OptionsActivity.class);
         startActivity(intent);
     }
+
 }
