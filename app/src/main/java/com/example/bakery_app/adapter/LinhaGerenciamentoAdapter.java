@@ -25,7 +25,7 @@ import java.util.List;
 public class LinhaGerenciamentoAdapter extends BaseAdapter {
 
     private static LayoutInflater layoutInflater = null;
-    List<Coffee> cafes =  new ArrayList<>();
+    List<Coffee> cafes;
 
     private ManagerActivity listarCafes;
 
