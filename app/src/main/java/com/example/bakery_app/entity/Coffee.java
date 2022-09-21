@@ -7,13 +7,13 @@ import java.io.Serializable;
 
 @Entity
 public class Coffee implements Serializable {
+
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String nome;
     private String descricao;
     private String categoria;
-    //TODO mudar preco pra double
-    private String preco;
+    private String preco; //TODO mudar preco pra double
 
     public Coffee(){}
 
@@ -53,5 +53,16 @@ public class Coffee implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Coffee{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", preco='" + preco + '\'' +
+                '}';
     }
 }
