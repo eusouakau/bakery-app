@@ -13,7 +13,7 @@ public class Coffee implements Serializable {
     private String nome;
     private String descricao;
     private String categoria;
-    private String preco; //TODO mudar preco pra double
+    private Double preco;
 
     public Coffee(){}
 
@@ -41,11 +41,11 @@ public class Coffee implements Serializable {
         this.categoria = categoria;
     }
 
-    public String getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) { this.preco = preco; }
+    public void setPreco(Double preco) { this.preco = preco; }
 
     public int getId() {
         return id;
