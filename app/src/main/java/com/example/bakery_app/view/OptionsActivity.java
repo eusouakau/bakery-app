@@ -61,7 +61,7 @@ public class OptionsActivity extends AppCompatActivity implements AdapterView.On
 
     public void abrirLocalizacao(View view){
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("geo:-30.037719647934765(Agridoce Café)?z=15"));
+        intent.setData(Uri.parse("geo:-30.037785869789733, -51.223973388470434"));
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
