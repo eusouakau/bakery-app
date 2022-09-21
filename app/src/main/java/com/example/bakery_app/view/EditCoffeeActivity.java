@@ -48,6 +48,7 @@ public class EditCoffeeActivity extends AppCompatActivity {
         editTextDesc.setText(coffee.getDescricao());
         editTextPreco.setText(coffee.getPreco());
     }
+
     private void alterarCafe() {
         if (editTextNome.getText().toString().trim().equals("")) {
             Toast.makeText(getApplicationContext(), "Nome é obrigatório!", Toast.LENGTH_LONG).show();
@@ -58,7 +59,7 @@ public class EditCoffeeActivity extends AppCompatActivity {
         } else if (editTextPreco.getText().toString().trim().equals("")) {
             Toast.makeText(getApplicationContext(), "O preço é obrigatório!", Toast.LENGTH_LONG).show();
             editTextPreco.requestFocus();
-      } else {
+        } else {
             coffee.setNome(editTextNome.getText().toString().trim());
             coffee.setDescricao(editTextDesc.getText().toString().trim());
             coffee.setPreco(editTextPreco.getText().toString().trim());
@@ -68,8 +69,8 @@ public class EditCoffeeActivity extends AppCompatActivity {
             mostraMensagem();
         }
     }
-    public void mostraMensagem(){
 
+    public void mostraMensagem(){
         String msg = "Café alterado com sucesso! ";
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle(R.string.app_name);
@@ -84,6 +85,7 @@ public class EditCoffeeActivity extends AppCompatActivity {
         });
         alertDialog.show();
     }
+
     public void cancelarEdicao(View view){
         Intent intent = new Intent(this, OptionsActivity.class);
         startActivity(intent);

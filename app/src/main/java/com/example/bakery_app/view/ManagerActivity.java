@@ -14,6 +14,7 @@ import com.example.bakery_app.entity.Coffee;
 import java.util.List;
 
 public class ManagerActivity extends AppCompatActivity {
+
     private ListView managerList;
 
     @Override

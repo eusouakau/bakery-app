@@ -1,6 +1,5 @@
 package com.example.bakery_app.dao;
 
-
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -12,7 +11,6 @@ import java.util.List;
 import com.example.bakery_app.entity.Coffee;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
-
 
 @Dao
 public interface CoffeeDAO {

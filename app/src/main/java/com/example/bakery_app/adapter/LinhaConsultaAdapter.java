@@ -1,6 +1,5 @@
 package com.example.bakery_app.adapter;
 
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,6 @@ import com.example.bakery_app.view.MenuActivity;
 
 import java.util.List;
 
-
 public class LinhaConsultaAdapter extends BaseAdapter {
 
     private static LayoutInflater layoutInflater = null;
@@ -26,7 +24,6 @@ public class LinhaConsultaAdapter extends BaseAdapter {
         this.cafes = cafes;
         this.listarCafes =  listarCafes;
         this.layoutInflater = (LayoutInflater) this.listarCafes.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
     }
 
     @Override

@@ -11,7 +11,6 @@ import com.example.bakery_app.entity.Coffee;
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase appDatabase;
-
     public abstract CoffeeDAO createCoffeeDAO();
 
     public static AppDatabase getInstance(Context context) {

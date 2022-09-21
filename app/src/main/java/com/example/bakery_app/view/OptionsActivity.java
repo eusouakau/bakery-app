@@ -13,7 +13,9 @@ import android.widget.ListView;
 import com.example.bakery_app.R;
 
 public class OptionsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+
     View view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +58,6 @@ public class OptionsActivity extends AppCompatActivity implements AdapterView.On
                 startActivity(intent);
         }
     }
-
 
     public void abrirLocalizacao(View view){
         Intent intent = new Intent(Intent.ACTION_VIEW);
