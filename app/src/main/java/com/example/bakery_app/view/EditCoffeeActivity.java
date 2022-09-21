@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -16,7 +17,7 @@ import com.example.bakery_app.R;
 import com.example.bakery_app.dao.AppDatabase;
 import com.example.bakery_app.dao.CoffeeDAO;
 import com.example.bakery_app.entity.Coffee;
-//TODO para aparecer a categoria correta do cafe quando abre para a edição
+
 public class EditCoffeeActivity extends AppCompatActivity {
 
     EditText editTextNome ;
@@ -46,8 +47,8 @@ public class EditCoffeeActivity extends AppCompatActivity {
         coffee = (Coffee) getIntent().getSerializableExtra("cafe");
         editTextNome.setText(coffee.getNome());
         editTextDesc.setText(coffee.getDescricao());
-        editTextPreco.setText(coffee.getPreco().toString());
-        //spinCategoria.setOnClickListener(coffee.);
+        editTextPreco.setText(String.valueOf(coffee.getPreco()));
+        spinCategoria.setSelection(retornaPosicaoCategoria(coffee.getCategoria()));
     }
 
     private void alterarCafe() {
@@ -92,4 +93,15 @@ public class EditCoffeeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private int retornaPosicaoCategoria(String nomeCafe){
+        int posicao = -1;
+        ArrayAdapter<String> categoriaAdapter = (ArrayAdapter) spinCategoria.getAdapter();
+        for (int i = 0; i < categoriaAdapter.getCount(); i++) {
+            if(categoriaAdapter.getItem(i).toString().equals(nomeCafe)){
+                posicao = i;
+                break;
+            }
+        }
+        return posicao;
+    }
 }
