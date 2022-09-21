@@ -50,7 +50,7 @@ public class LinhaConsultaAdapter extends BaseAdapter {
         AppCompatTextView textViewCategoria = viewLinhaLista.findViewById(R.id.textViewCategoria);
 
         textViewNome.setText(cafes.get(position).getNome());
-        textViewPreco.setText(cafes.get(position).getPreco());
+        textViewPreco.setText(cafes.get(position).getPreco().toString());
         textViewDescricao.setText(cafes.get(position).getDescricao());
         textViewCategoria.setText(cafes.get(position).getCategoria());
 

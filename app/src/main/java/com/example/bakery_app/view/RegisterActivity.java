@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
                 categoria = findViewById(R.id.spinCategoria);
                 Coffee coffee = new Coffee();
                 coffee.setNome(nome.getText().toString());
-                coffee.setPreco(preco.getText().toString());
+                coffee.setPreco(Double.parseDouble(preco.getText().toString()));
                 coffee.setDescricao(descricao.getText().toString());
                 coffee.setCategoria(categoria.getSelectedItem().toString());
                 AppDatabase.getInstance(getApplicationContext()).createCoffeeDAO().insert(coffee);

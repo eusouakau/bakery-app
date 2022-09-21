@@ -46,7 +46,8 @@ public class EditCoffeeActivity extends AppCompatActivity {
         coffee = (Coffee) getIntent().getSerializableExtra("cafe");
         editTextNome.setText(coffee.getNome());
         editTextDesc.setText(coffee.getDescricao());
-        editTextPreco.setText(coffee.getPreco());
+        editTextPreco.setText(coffee.getPreco().toString());
+        //spinCategoria.setOnClickListener(coffee.);
     }
 
     private void alterarCafe() {
@@ -62,7 +63,7 @@ public class EditCoffeeActivity extends AppCompatActivity {
         } else {
             coffee.setNome(editTextNome.getText().toString().trim());
             coffee.setDescricao(editTextDesc.getText().toString().trim());
-            coffee.setPreco(editTextPreco.getText().toString().trim());
+            coffee.setPreco(Double.parseDouble(editTextPreco.getText().toString().trim()));
             coffee.setCategoria(spinCategoria.getSelectedItem().toString().trim());
             CoffeeDAO coffeeDAO = AppDatabase.getInstance(getApplicationContext()).createCoffeeDAO();
             coffeeDAO.update(coffee);
