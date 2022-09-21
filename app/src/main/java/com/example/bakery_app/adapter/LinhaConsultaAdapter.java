@@ -17,14 +17,11 @@ import java.util.List;
 
 public class LinhaConsultaAdapter extends BaseAdapter {
 
-    //Cria objeto LayoutInflater para ligar com a View activity_row.xml
     private static LayoutInflater layoutInflater = null;
     List<Coffee> cafes;
 
-    //Cria objeto do tipo que lista os cafés
     private MenuActivity listarCafes;
 
-    //Construtor que recebe a ativide como parametro e a lista de cafes que vai retornar do BD
     public LinhaConsultaAdapter(MenuActivity listarCafes, List<Coffee> cafes ) {
         this.cafes = cafes;
         this.listarCafes =  listarCafes;
@@ -32,7 +29,6 @@ public class LinhaConsultaAdapter extends BaseAdapter {
 
     }
 
-    //Retorna a quantidade de objetos que esta na lista
     @Override
     public int getCount(){
         return cafes.size();
@@ -47,13 +43,10 @@ public class LinhaConsultaAdapter extends BaseAdapter {
         return position;
     }
 
-    //Método converte os valores de um item  da lista de Coffee para uma linha do ListView
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        //Cria um objeto para acessar o layout activity_row.xml
         final View viewLinhaLista = layoutInflater.inflate(R.layout.activity_row,null);
 
-        //vincula os campos do arquivo de layout aos objetos cadastrados
         AppCompatTextView textViewNome  =  viewLinhaLista.findViewById(R.id.textViewNome);
         AppCompatTextView textViewPreco = viewLinhaLista.findViewById(R.id.textViewPreco);
         AppCompatTextView textViewDescricao = viewLinhaLista.findViewById(R.id.textViewDescricao);

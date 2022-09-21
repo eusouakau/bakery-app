@@ -36,15 +36,12 @@ public class EditCoffeeActivity extends AppCompatActivity {
         spinCategoria =  this.findViewById(R.id.spinCategoriaEdit);
         botaoEditar =  this.findViewById(R.id.saveButton);
 
-
-        //cria evento para o botão editar
         botaoEditar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 alterarCafe();
             }
         });
-        //Pega o objeto que foi passado como parâmetro
         Bundle extra =  this.getIntent().getExtras();
         coffee = (Coffee) getIntent().getSerializableExtra("cafe");
         editTextNome.setText(coffee.getNome());
@@ -62,7 +59,6 @@ public class EditCoffeeActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "O preço é obrigatório!", Toast.LENGTH_LONG).show();
             editTextPreco.requestFocus();
       } else {
-            //modifica os dados do objeto que foi passado como parâmetro
             coffee.setNome(editTextNome.getText().toString().trim());
             coffee.setDescricao(editTextDesc.getText().toString().trim());
             coffee.setPreco(editTextPreco.getText().toString().trim());
@@ -75,14 +71,12 @@ public class EditCoffeeActivity extends AppCompatActivity {
     public void mostraMensagem(){
 
         String msg = "Café alterado com sucesso! ";
-        //mostrando caixa de diálogo de sucesso
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
         alertDialog.setTitle(R.string.app_name);
         alertDialog.setMessage(msg);
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                // voltando para a tela de gerenciamento
                 Intent intent = new Intent(getApplicationContext(), ManagerActivity.class);
                 startActivity(intent);
                 finish();
