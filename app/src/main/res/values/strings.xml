@@ -1,8 +1,6 @@
 <resources>
     <string name="start_button">Entrar</string>
     <string name="app_name">Kau"'"s Coffee House</string>
-    <string name="welcome">Seja Bem-vindo! Bora pedir um, café?</string>
-    <string name="selected">Valor selecionado no </string>
     <string name="register_title">Cadastro</string>
     <string name="register_button">Cadastrar</string>
     <string name="cancel_button">Cancelar</string>
@@ -10,6 +8,9 @@
     <string name="editar">Editar</string>
     <string name="salvar_alt">Salvar</string>
     <string name="sobre_nos">Sobre nós</string>
+    <string name="categoria">Categoria</string>
+    <string name="preco">Preço</string>
+    <string name="descricao">Descrição</string>
     <string name="sobre_nos_texto">
         Olá, prezado(a)! Nós somos uma cafeteria especializada em cafés artezanais. Somos apaixonados por cafés e saboores, estamos sempre criando novas combinações para apaixonar você! Estamos no mercado há 15 anos, sempre visando a qualidade dos nossos produtos e serviços, buscando a máxima satisfação dos nossos clientes! Nós nascemos de um sonho e jamais deixamos de sonhar, esperamos que você se sinta a vontade e volte sempre a nos prestigiar! Tenha um bom Café!
     </string>
